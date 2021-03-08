@@ -1,0 +1,453 @@
+/* ============= RESET STYLES ============= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+/* ============= END RESET STYLES ============= */
+
+:root {
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  /*--third-font: "Oleo Script", cursive;*/
+  --header-color: #212121;
+  --content-color: #757575;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --silver-backgr: #f5f4fa;
+  --dark-backgr: #2f303a;
+  --btm-hover: #188ce8;
+  --header-line: #ececec;
+  --work-card-border: #eeeeee;
+  --padding-value: 94px;
+}
+
+body {
+  font-family: var(--main-font);
+  /*background: #e5e5e5;*/
+  color: var(--content-color);
+}
+
+header {
+  background: var(--white-color);
+  border-bottom: 1px solid var(--header-line);
+}
+
+/*  Это патерн для крытия логических заголовков */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* ============= COMPONENTS ============= */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: var(--padding-value);
+  padding-bottom: var(--padding-value);
+}
+
+/* ============= END COMPONENTS ============= */
+
+/* ============= HEADER ============= */
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+
+  margin-right: 93px;
+}
+
+/* НЕ ЗНАЮ НУЖНЫ ЛИ ЭТИ ЭФФЕКТЫ НА ЛОГОТИПЕ, НО НА ВСЯКИЙ СЛУЧАЙ СДЕЛАЛ. ПРИМЕНЯЕТСЯ И В ШАПКЕ И В ФУТЕРЕ*/
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
+}
+
+.logo-studio-header {
+  color: var(--header-color);
+}
+
+.logo-studio-footer {
+  color: var(--white-color);
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation-links {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--header-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.navigation-links:hover,
+.navigation-links:focus {
+  color: var(--accent-color);
+}
+
+.navigation-links > .current {
+  color: var(--accent-color);
+  font-size: 66;
+}
+
+.header-contacts {
+  margin-left: auto;
+}
+
+.header .header-contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contact-links {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--content-color);
+
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contact-links:hover,
+.contact-links:focus {
+  color: var(--accent-color);
+}
+
+.current {
+  color: var(--accent-color);
+}
+
+/* ============= END HEADER ============= */
+
+.hero-backgr {
+  background: var(--dark-backgr);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.main-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.order-service-btm {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: var(--white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin: 0 auto;
+  padding: 10px 32px;
+}
+
+.order-service-btm:hover,
+.order-service-btm:focus {
+  color: var(--white-color);
+  background: var(--btm-hover);
+}
+
+/* =============  STUDIO. ADVANTAGES SECTION  ============= */
+
+.advantages-list {
+  display: flex;
+  padding-top: var(--padding-value);
+  padding-bottom: var(--padding-value);
+  margin-left: -30px;
+}
+
+.advantages-item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--header-color);
+  margin-bottom: 10px;
+}
+
+.advantages-description {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+/* ============= END  STUDIO. ADVANTAGES SECTION ============= */
+
+/* =============  STUDIO. SECTION: WHAT WE DO and OUR TEAM ============= */
+
+.secondary-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+
+  margin-bottom: 50px;
+}
+
+.what-we-do-list {
+  display: flex;
+  padding-bottom: var(--padding-value);
+  margin-left: -30px;
+}
+
+.what-we-do-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}
+
+.team-section-bkr {
+  background: var(--silver-backgr);
+}
+
+.team-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.team-list > li {
+  background: var(--white-color);
+}
+
+.team-item-wrapper {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+}
+
+.team-item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+  margin-bottom: 10px;
+}
+
+.team-position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* ============= END  STUDIO. SECTION: WHAT WE DO and OUR TEAM ============= */
+
+/* ============= FOOTER ============= */
+footer {
+  background: var(--dark-backgr);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  margin-top: 20px;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-contacts {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.footer-contacts:hover,
+.footer-contacts:focus {
+  color: var(--accent-color);
+}
+
+/* ============= END FOOTER ============= */
+
+/* ============= PORTFOLIO. SECTION OUR WORKS ============= */
+.list-works-btm {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.works-btm-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-btm {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--header-color);
+  background: var(--silver-backgr);
+
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  display: block;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+}
+
+.filter-btm:hover,
+.filter-btm:focus {
+  color: var(--white-color);
+  background: var(--accent-color);
+}
+
+.work-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.work-card-list > li {
+  background: var(--white-color);
+}
+
+.work-card {
+  box-sizing: border-box;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid var(--work-card-border);
+}
+
+.work-card-content {
+  border: 1px solid var(--work-card-border);
+  border-top: none;
+  padding: 20px 24px;
+}
+
+.works-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--header-color);
+
+  margin-bottom: 4px;
+}
+
+.works-description {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--content-color);
+}
+
+/* ============= TND  PORTFOLIO. SECTION OUR WORKS ============= */
