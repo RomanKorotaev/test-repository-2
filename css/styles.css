@@ -191,7 +191,44 @@ header {
 /* ============= END HEADER ============= */
 
 .hero-backgr {
-  background: var(--dark-backgr);
+  /*  -------------------------- MY CODE ------------------------ */
+  background-image: url("https://mdn.mozillademos.org/files/7693/catfront.png"); /*  My code*/
+
+  background-color: tomato; /*  My code*/
+
+  background-repeat: no-repeat; /*  My code*/
+  /* background-repeat: repeat; /*  My code*/
+  /* background-repeat: repeat-x; /*  My code*/
+  /* background-repeat: repeat-y; /*  My code*/ /* Поставит фоновое изображение по центру */
+
+  /* background-position: 50% 50%; /*  My code*/
+
+  /* Поставит фоновое изображение 100px от левого края и 200px от верха */
+  /* background-position: 100px 200px; /*  My code*/
+
+  /* Поставит фоновое изображение в нижний праый угол */
+  /* background-position: right bottom; /*  My code*/
+
+  /* Поставит фоновое изображение в верхний левый угол */
+  /* background-position: left top; /*  My code*/
+
+  /* Чтобы не привязываться к размерам элемента и не задавать позицию фона жёстко, можно использовать синтаксис позиции со смещением.*/
+  /* Например, если необходимо поставить фон в нижний правый угол элемента произвольных размеров так, чтобы фон отставал от границ на 30px справа и 20px снизу. */
+  /* background-position: right 30px bottom 20px; /*  My code*/
+
+  /* Исходные размеры изображения, значение по умолчанию */
+  /*background-size: auto auto; /*  My code*/
+
+  /* Ширина 200px, высота будет пропорциональна */
+  /*background-size: 200px; /*  My code*/
+
+  /* Ширина 200px, высота 300px */
+  /*background-size: 200px 300px; /*  My code*/
+
+  /*  --------------------------END  MY CODE ------------------------ */
+
+  /*background: var(--dark-backgr); */
+
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
