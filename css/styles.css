@@ -192,7 +192,15 @@ header {
 
 .hero-backgr {
   /*  -------------------------- MY CODE ------------------------ */
-  background-image: url("https://mdn.mozillademos.org/files/7693/catfront.png"); /*  My code*/
+  /*background-image: url("https://mdn.mozillademos.org/files/7693/catfront.png"); /*  My code*/
+  background-image: url("https://cdn.pixabay.com/photo/2020/10/07/10/51/mountains-5634817_1280.jpg"); /*  My code*/
+
+  /*background-image: url("https://image.flaticon.com/icons/svg/2909/2909923.svg"),
+      url("https://image.flaticon.com/icons/svg/2847/2847383.svg"),
+      url("https://image.flaticon.com/icons/svg/2909/2909673.svg"),
+      url("https://s.tcdn.co/e3a/876/e3a87689-707f-3495-b94a-8ee96e2538e5/39.png"),
+      url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg");
+    */
 
   background-color: tomato; /*  My code*/
 
@@ -201,7 +209,9 @@ header {
   /* background-repeat: repeat-x; /*  My code*/
   /* background-repeat: repeat-y; /*  My code*/ /* Поставит фоновое изображение по центру */
 
-  /* background-position: 50% 50%; /*  My code*/
+  /*background-position: 50% 50%; /*  My code*/
+  /* Позиционирование по центру */
+  background-position: center; /*  My code*/
 
   /* Поставит фоновое изображение 100px от левого края и 200px от верха */
   /* background-position: 100px 200px; /*  My code*/
@@ -224,6 +234,28 @@ header {
 
   /* Ширина 200px, высота 300px */
   /*background-size: 200px 300px; /*  My code*/
+
+  /* Значением также могут быть два зарезервированных слова - contain и cover.*/
+  /* Они стремятся вместить в контейнер фоновое изображение по максимуму, только одно */
+  /* за счёт обрезания лишнего, а другое за счёт появления пустого пространства в контейнере. */
+  /*background-size: contain; /*  My code*/
+  background-size: cover; /*  My code*/
+  /*background-size: auto; /*  My code*/
+
+  /* По умолчанию фоновое изображение прокручивается вместе с содержимым элемента. С помощью */
+  /* свойства background-attachment можно зафиксировать фон на месте и запретить прокручиваться при скроле.*/
+  /* background-attachment: scroll| fixed | inherit  /*  My code*/
+  background-attachment: fixed; /*  My code*/
+
+  /* Свойство background - Составное свойство для одновременного задания значений всех рассмотренных свойств.*/
+  /* background: background-color background-image background-repeat background-position background-attachment */
+  /* Если какой-то компонент не указан, будет взято его значение по умолчанию.*/
+
+  /* Позволяет позиционировать фоновое изображение в разніх блочнх моделях */
+  background-origin: content-box; /* padding-box |  border-box |  ; */
+
+  /* Похоже на предідущее свойство , НО сдесь изображение ОБРЕЗАЕТСЯ под указанную блочную модель */
+  background-clip: content-box; /* border-box;  |  padding-box  ; */
 
   /*  --------------------------END  MY CODE ------------------------ */
 
@@ -315,6 +347,34 @@ header {
   margin-bottom: 50px;
 }
 
+/* -------------------  MY CODE ------------------- */
+.secondary-title::before {
+  content: "Это текст в ::before";
+  font-size: 40px;
+  color: orange;
+}
+
+.secondary-title::after {
+  content: "Это текст в ::after";
+  font-size: 30px;
+  color: teal;
+}
+/* Псевдокласс :hover
+/* Для того чтобы изменить стили псевдоэлемента при событии на родительском элементе, */
+/* например ховер, необходимо использовать следующий селектор.   */
+
+/* Применить стили к псевдоэлементу .box::before при ховере по элементу .box */
+.secondary-title:hover::before {
+  color: green;
+}
+
+/* Применить стили к псевдоэлементу .box::after при ховере по элементу .box */
+.secondary-title:hover::after {
+  color: tomato;
+}
+
+/* -------------------  END MY CODE ------------------- */
+
 .what-we-do-list {
   display: flex;
   padding-bottom: var(--padding-value);
@@ -340,9 +400,43 @@ header {
 }
 
 .team-item-wrapper {
-  flex-basis: calc(100% / 4 - 30px);
+  /*flex-basis: calc(100% / 4 - 30px);*/
   margin-left: 30px;
+
+  /* ---------------------  MY CODE -------------------- */
+
+  /* Свойство object-fit  */
+  /* Определяет каким образом содержимое <img> (или <video>) будет вмещаться в */
+  /* контейнер, когда их размеры или пропорции не совпадают. Свойство object-fit обрезает, */
+  /* растягивает или масштабирует контентное изображение. Это похоже на background-size, но */
+  /*для КОНТЕЙНЕРНЫХ изображений. */
+  /* object-fit: fill | contain | cover | scale-down | none  + НУЖНО ВЫПОЛНИТЬ 2 (два) УСЛОВИЯ (описанов конспекте).  /*My code*/
+
+  /*height: 400px; /*My code*/
+  /*width: 300px; /*My code*/
+
+  /* Свойство object-position */
+  /* Дополняет свойство object-fit позволяя задать положение изображения в контейнере по */
+  /* осям X и Y. Это похоже на background-position, но для контентных изображений.*/
+  /* object-position: position | initial | inherit */
+  /* Значением свойства могут быть зарезервированные слова, абсолютные или относительные */
+  /* единиицы измерения. По умолчанию значение 50% 50%, то есть вертикально и горизонтально по центру. */
+
+  /* ---------------------  END MY CODE ----------------  */
 }
+
+/* ---------------------   MY CODE ----------------  */
+/*.team-item-wrapper > img { /*My code*/
+/* display: block; /*My code*/
+/*height: 100%; /*My code*/
+/*width: 100%; /*My code*/
+
+/*object-fit: scale-down; /*My code*/
+/* object-position: 10% 90%; /*My code*/
+/*object-position: right top; /*My code*/
+/*} /*My code*/
+
+/* ---------------------  END MY CODE ----------------  */
 
 .team-item {
   padding-top: 30px;
@@ -358,6 +452,52 @@ header {
   color: var(--header-color);
   margin-bottom: 10px;
 }
+
+/* ---------------------   MY CODE ----------------  */
+/* Это пример использование превдоклассов: ::before и ::after   */
+/* ВАЖНОЕ ПРАВИЛО! В правиле CSS при использовании этих псевдоклассов */
+/*  свойство content: ' '   . Даже если ничего не вставляем, то нужно ставить пустую строку!*/
+
+/* Псевдоэлемент-иконка. Пусть ::before будет виден всегда, а ::after только при ховере по ссылке. */
+
+/* Самое важное находится в этом CSS-правиле. Изменяем тип элемента на строчно-блочный и задаём фиксированную высоту и ширину. */
+/* Также не забываем указать свойство content с пустой строкой, чтобы браузер создал псевдоэлемент. */
+
+.team-title::before, /*My code*/
+.team-title::after {
+  /*My code*/
+  /*My code*/
+  display: inline-block; /*My code*/
+  content: ""; /*My code*/
+  width: 24px; /*My code*/
+  height: 24px; /*My code*/
+}
+
+.team-title::before {
+  margin-right: 16px;
+  background-image: url("https://image.flaticon.com/icons/svg/785/785116.svg"); /*My code*/
+}
+
+/* Добавляем и прячем иконку кота после текста ссылки */
+.team-title::after {
+  /*My code*/
+  display: none; /*My code*/
+  margin-left: 16px; /*My code*/
+  background-image: url("https://image.flaticon.com/icons/svg/616/616430.svg"); /*My code*/
+} /*My code*/
+
+.team-title:hover {
+  /*My code*/
+  color: #2196f3; /*My code*/
+} /*My code*/
+
+/* Показываем иконку кота при ховере по ссылке */
+.team-title:hover::after {
+  /*My code*/
+  display: block; /*My code*/
+} /*My code*/
+
+/* ---------------------  END MY CODE ----------------  */
 
 .team-position {
   font-size: 16px;
